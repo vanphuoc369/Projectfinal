@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#404040"
+    android:id="@+id/lnDisplay"
+    android:layout_weight="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="9">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/menu"
+                />
+            <TextView
+                android:id="@+id/tvNameOfSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:onClick="onClick"
+                android:text="Ten bai hat dang phat ..."/>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/imageplay"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/lnShuffle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:weightSum="0"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/shuffle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="20px"
+                android:background="@drawable/shuffle"
+                android:onClick="onClick"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/shuffleActive"
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="31px"
+                android:background="@drawable/shuffle_active"
+                android:onClick="onClick"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="0.98">
+            <ImageButton
+                android:id="@+id/previous"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:onClick="onClick"
+                android:background="@drawable/previous"/>
+
+            <LinearLayout
+                android:id="@+id/lnPauseAndUnpause"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:weightSum="2">
+
+                <ImageButton
+                    android:id="@+id/pause"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="onClick"
+                    android:background="@drawable/pause"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/unpause"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:onClick="onClick"
+                    android:background="@drawable/play"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/next"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/next"
+                android:onClick="onClick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:weightSum="2"
+            android:visibility="visible"
+            android:id="@+id/lnRepeat">
+
+            <ImageButton
+                android:id="@+id/repeat"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="30px"
+                android:onClick="onClick"
+                android:visibility="visible"
+                android:background="@drawable/repeat_disable"/>
+            <ImageButton
+                android:id="@+id/repeatOne"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="30px"
+                android:onClick="onClick"
+                android:visibility="gone"
+                android:background="@drawable/repeat_active_one"/>
+            <ImageButton
+                android:id="@+id/repeatActive"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="30px"
+                android:onClick="onClick"
+                android:visibility="gone"
+                android:background="@drawable/repeat_active"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

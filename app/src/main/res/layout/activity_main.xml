@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Danh sách bài hát"
+            android:gravity="center"
+            android:textColor="#0a68dc"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ListView
+                android:id="@+id/lvSongs"
+                android:layout_below="@id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:textColor="#986412"
+                android:textSize="18sp">
+            </ListView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:id="@+id/lnShow"
+                android:layout_weight="0.1"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:background="@drawable/bgshow">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageButton
+                        android:id="@+id/previous"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:onClick="onClick"
+                        android:background="@drawable/previous"/>
+
+                    <LinearLayout
+                        android:id="@+id/lnPauseAndUnpause"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:weightSum="2">
+
+                        <ImageButton
+                            android:id="@+id/pause"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/pause"
+                            android:onClick="onClick"
+                            android:visibility="visible" />
+
+                        <ImageButton
+                            android:id="@+id/unpause"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/play"
+                            android:onClick="onClick"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/next"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/next"
+                        android:onClick="onClick" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNameOfSong"
+                    android:textColor="#af328b"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="30px"/>
+            </LinearLayout>
+        </LinearLayout>
+</LinearLayout>
